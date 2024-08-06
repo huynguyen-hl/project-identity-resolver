@@ -55,7 +55,10 @@ yarn test
 # Build the image
 docker build -t storage-service:latest .
 
-# Start the container
+# Local Storage - Start the container
+docker run -d --env-file .env storage-service:latest
+
+# Cloud Storage - Start the container 
 docker run -d --env-file .env -p 3333:3333 \
 -v path/to/local/gcp/service-account-file.json:/tmp/service-account-file.json \
 storage-service:latest
