@@ -25,15 +25,15 @@ jobs:
 
             - name: Run tests
               run: yarn test:ci
-
+      
             - name: Coverage
               uses: artiomtr/jest-coverage-report-action@v2
               with:
-                  test-script: yarn jest
-                  github-token: ${{ secrets.GITHUB_TOKEN }}
-                  coverage-file: report.json
-                  base-coverage-file: report.json
-                  threshold: 80
+                test-script: yarn jest
+                github-token: ${{ secrets.GITHUB_TOKEN }}
+                coverage-file: report.json
+                base-coverage-file: report.json
+                threshold: 80
 
             - name: Build
               run: yarn build
