@@ -38,11 +38,11 @@ The default values should be sufficient for local development.
 # Install dependencies
 yarn install
 
-# Run the app and watch for changes
-yarn dev
-
 # Build the app
 yarn build
+
+# Run the app and watch for changes
+yarn dev
 
 # Start the server once built
 yarn start
