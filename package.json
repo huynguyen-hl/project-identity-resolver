@@ -12,6 +12,7 @@
         "watch:server": "nodemon \"./dist/server.js\" --watch \"./dist\""
     },
     "dependencies": {
+        "@aws-sdk/client-s3": "^3.693.0",
         "@google-cloud/storage": "^7.7.0",
         "body-parser": "^1.20.3",
         "cors": "^2.8.5",
