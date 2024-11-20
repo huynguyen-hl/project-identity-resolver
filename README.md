@@ -112,8 +112,9 @@ yarn start
 
 ### Amazon Web Services (AWS)
 
-For production environments,
-use Amazon Web Services to store files in an S3 bucket.
+For the production environment, we recommend using IAM roles to enhance security and eliminate the need to hardcode AWS credentials.
+To more details about using IAM roles, please refer to the [AWS documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html).
+Use Amazon Web Services to store files in an S3 bucket.
 
 Example:
 
