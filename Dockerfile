@@ -7,8 +7,6 @@ ARG DOMAIN=localhost
 ARG PORT=3333
 ARG AVAILABLE_BUCKETS=verifiable-credentials,private-verifiable-credentials,epcis-events
 ARG STORAGE_TYPE=local
-ARG REGION=ap-southeast-2
-ARG STORAGE_TYPE=local
 
 # Set the environment variables
 ENV API_VERSION=${API_VERSION}
@@ -16,7 +14,6 @@ ENV PROTOCOL=${PROTOCOL}
 ENV DOMAIN=${DOMAIN}
 ENV PORT=${PORT}
 ENV AVAILABLE_BUCKETS=${AVAILABLE_BUCKETS}
-ENV REGION=${REGION}
 ENV STORAGE_TYPE=${STORAGE_TYPE}
 
 WORKDIR /app
