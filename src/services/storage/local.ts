@@ -27,9 +27,7 @@ export class LocalStorageService implements IStorageService {
 
         // Write JSON data to file
         fs.writeFileSync(filePath, body);
-
-        const domain = DOMAIN === 'localhost' ? `${DOMAIN}:${PORT}` : DOMAIN;
-        return { uri: `${PROTOCOL}://${domain}/${API_VERSION}/${bucket}/${key}` };
+        return { uri: `${PROTOCOL}://${DOMAIN}:${PORT}/${API_VERSION}/${bucket}/${key}` };
     }
 
     /**
