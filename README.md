@@ -124,8 +124,8 @@ export STORAGE_TYPE=aws
 
 # Set the AWS region
 REGION=ap-southeast-2
-AWS_ACCESS_KEY_ID=AWS_ACCESS_KEY_ID
-AWS_SECRET_ACCESS_KEY=AWS_SECRET_ACCESS_KEY
+AWS_ACCESS_KEY_ID=AWS_ACCESS_KEY_ID # Local development only
+AWS_SECRET_ACCESS_KEY=AWS_SECRET_ACCESS_KEY # Local development only
 
 # Build the app
 yarn build
