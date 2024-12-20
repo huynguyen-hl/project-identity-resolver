@@ -24,16 +24,6 @@ jobs:
         id: new_version
         run: yarn release:doc
 
-      - name: Commit and push changes
-        run: |
-          VERSION="${{ steps.new_version.outputs.doc_version }}"
-
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git add .
-          git commit -m "docs: release documentation version ${VERSION}"
-          git push origin ${GITHUB_REF_NAME}
-
       - name: Build website
         run: cd documentation && yarn build
         env:
@@ -53,3 +43,13 @@ jobs:
           # https://github.com/actions/checkout/issues/13#issuecomment-724415212
           # The GH actions bot is used by default if you didn't specify the two fields.
           # You can swap them out with your own user credentials.
+
+      - name: Commit and push changes
+        run: |
+          VERSION="${{ steps.new_version.outputs.doc_version }}"
+
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add .
+          git commit -m "docs: release documentation version ${VERSION}"
+          git push origin ${GITHUB_REF_NAME}
