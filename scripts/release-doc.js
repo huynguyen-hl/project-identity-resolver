@@ -20,7 +20,12 @@ try {
   // Execute the Docusaurus version command
   execSync(`yarn docusaurus docs:version ${docVersion}`, { stdio: 'inherit' });
 
+  // Output the version in a way that GitHub Actions can capture
+  console.log(`::set-output name=doc_version::${docVersion}`);
+  // Also echo for normal console output
   console.log(`Successfully created documentation version ${docVersion}`);
+
+  process.exit(0);
 } catch (error) {
   console.error('Error creating documentation version:', error.message);
   process.exit(1);
