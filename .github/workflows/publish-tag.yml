@@ -7,13 +7,14 @@ on:
   workflow_dispatch:
 
 jobs:
-  tagging:
+  publish-tag:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      # Get the version from version.json file and store it in the output file
       - name: Get version from version.json
         id: retrieve_version
         run: |
@@ -24,6 +25,7 @@ jobs:
           fi
           echo "new_version=$new_version" >> "$GITHUB_OUTPUT"
 
+      # Create and push tag to the repository by using the version from the output file
       - name: Create and push tag
         run: |
           new_version=${{ steps.retrieve_version.outputs.new_version }}
