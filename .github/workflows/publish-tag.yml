@@ -1,0 +1,51 @@
+name: Publish Tag
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  tagging:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Get version from version.json
+        id: retrieve_version
+        run: |
+          new_version=$(jq -r '.version' version.json)
+          if [ -z "$version" ]; then
+            echo "Error: version field is empty or not found in version.json!"
+            exit 1
+          fi
+          echo "new_version=$new_version" >> "$GITHUB_OUTPUT"
+
+      - name: Check if tag already exists
+        id: check_tag
+        run: |
+          new_version=${{ steps.retrieve_version.outputs.new_version }}
+          if git rev-parse "$new_version" >/dev/null 2>&1; then
+            echo "Tag $new_version already exists!"
+            exit 1
+          fi
+
+      - name: Create and push tag
+        run: |
+          new_version=${{ steps.retrieve_version.outputs.new_version }}
+
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+          git tag -a "$new_version" -m "Release version $new_version"
+          git push origin "$new_version"
+
+      # - name: Create GitHub Release
+      #   uses: ncipollo/release-action@v1
+      #   with:
+      #     tag: 'v${{ steps.get_version.outputs.version }}'
+      #     name: 'Release ${{ steps.get_version.outputs.version }}'
+      #     generateReleaseNotes: true
+      #     prerelease: false
