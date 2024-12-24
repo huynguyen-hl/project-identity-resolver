@@ -2,14 +2,6 @@
   "packages": {
     ".": {
       "release-type": "simple",
-      "versioning": "default",
-      "extra-files": [
-        {
-          "type": "json",
-          "path": "version.json",
-          "jsonpath": "$.version"
-        }
-      ],
       "changelog-sections": [
         {
           "type": "feat",
@@ -34,6 +26,21 @@
         {
           "type": "removed",
           "section": "Removed",
+          "hidden": false
+        },
+        {
+          "type": "docs",
+          "section": "Documentation",
+          "hidden": false
+        },
+        {
+          "type": "deps",
+          "section": "Dependencies",
+          "hidden": false
+        },
+        {
+          "type": "chore",
+          "section": "Miscellaneous",
           "hidden": false
         }
       ]
