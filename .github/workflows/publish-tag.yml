@@ -52,7 +52,7 @@ jobs:
         with:
           release-type: simple
           release-as: ${{ steps.retrieve_version.outputs.new_version }}
-          config-file: release-please-config.json
+          config-file: .github/workflows/release-please-config.json
 
       # Create tag and release manually after changelog is generated
       # - name: Create tag and release
