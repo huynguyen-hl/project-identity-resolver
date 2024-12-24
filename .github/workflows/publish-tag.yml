@@ -9,6 +9,8 @@ on:
 jobs:
   publish-tag:
     runs-on: ubuntu-latest
+    outputs:
+      new_tag: ${{ steps.publish-tag.outputs.new_tag }}
 
     steps:
       - name: Checkout code
@@ -27,6 +29,7 @@ jobs:
 
       # Create and push tag to the repository by using the version from the output file
       - name: Create and push tag
+        id: publish-tag
         run: |
           new_version=${{ steps.retrieve_version.outputs.new_version }}
 
@@ -34,3 +37,19 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git tag -a "$new_version" -m "Release version $new_version"
           git push origin "$new_version"
+
+          echo "new_tag=$new_version" >> "$GITHUB_OUTPUT"
+  
+  publish-release:
+    runs-on: ubuntu-latest
+    needs: publish-tag
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Create a release in the repository by using the version from the output file
+      - name: Create release
+        uses: googleapis/release-please-action@v4
+        with:
+          release-type: simple
