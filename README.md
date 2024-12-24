@@ -224,5 +224,4 @@ docker run -d --env-file .env -p 3333:3333 \
 storage-service:latest
 ```
 
-test fix commit
-added: new configuration option
+git commit -m "feat: add real-time data synchronization"
