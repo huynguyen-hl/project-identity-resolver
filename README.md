@@ -225,3 +225,4 @@ storage-service:latest
 ```
 
 test fix commit
+added: new configuration option
