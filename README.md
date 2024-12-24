@@ -223,3 +223,5 @@ docker run -d --env-file .env -p 3333:3333 \
 -e AWS_SECRET_ACCESS_KEY=YOUR_AWS_SECRET \
 storage-service:latest
 ```
+
+test fix commit
