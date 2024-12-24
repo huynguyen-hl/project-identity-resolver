@@ -227,3 +227,4 @@ storage-service:latest
 git commit -m "feat: add real-time data synchronization"
 git commit -m "fix: prevent memory leak in background tasks"
 git commit -m "refactor: improve code organization in storage service"
+git commit -m "test: add unit tests for storage service"
