@@ -6,42 +6,44 @@
         {
           "type": "feat",
           "section": "Features",
-          "hidden": false
+          "hidden": false,
+          "type-plural": "Features"
         },
         {
           "type": "fix",
           "section": "Bug Fixes",
-          "hidden": false
+          "hidden": false,
+          "type-plural": "Bug Fixes"
         },
         {
-          "type": "added",
-          "section": "Added",
-          "hidden": false
+          "type": "refactor",
+          "section": "Code Refactoring",
+          "hidden": false,
+          "type-plural": "Code Refactoring"
+        },
+        {
+          "type": "test",
+          "section": "Tests",
+          "hidden": false,
+          "type-plural": "Tests"
         },
         {
           "type": "changed",
           "section": "Changed",
-          "hidden": false
-        },
-        {
-          "type": "removed",
-          "section": "Removed",
-          "hidden": false
+          "hidden": false,
+          "type-plural": "Changes"
         },
         {
           "type": "docs",
           "section": "Documentation",
-          "hidden": false
-        },
-        {
-          "type": "deps",
-          "section": "Dependencies",
-          "hidden": false
+          "hidden": false,
+          "type-plural": "Documentation"
         },
         {
           "type": "chore",
           "section": "Miscellaneous",
-          "hidden": false
+          "hidden": false,
+          "type-plural": "Chores"
         }
       ]
     }
