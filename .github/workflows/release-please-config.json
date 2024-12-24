@@ -1,0 +1,50 @@
+{
+  "packages": {
+    ".": {
+      "release-type": "simple",
+      "versioning": "default",
+      "changelog-sections": [
+        {
+          "type": "feat",
+          "section": "Features",
+          "hidden": false
+        },
+        {
+          "type": "fix",
+          "section": "Bug Fixes",
+          "hidden": false
+        },
+        {
+          "type": "docs",
+          "section": "Documentation",
+          "hidden": false
+        },
+        {
+          "type": "added",
+          "section": "Added",
+          "hidden": false
+        },
+        {
+          "type": "changed",
+          "section": "Changed",
+          "hidden": false
+        },
+        {
+          "type": "removed",
+          "section": "Removed",
+          "hidden": false
+        },
+        {
+          "type": "deps",
+          "section": "Dependencies",
+          "hidden": false
+        },
+        {
+          "type": "chore",
+          "section": "Miscellaneous",
+          "hidden": false
+        }
+      ]
+    }
+  }
+}
