@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.0.3](https://github.com/huynguyen-hl/project-identity-resolver/compare/v1.0.2...v1.0.3) (2024-12-25)
+
+
+### Tests
+
+* Add unit tests for storage service ([6770e6f](https://github.com/huynguyen-hl/project-identity-resolver/commit/6770e6f3ee4918cffe468adc0f00350d59d97471))
+
+
+### Miscellaneous
+
+* Comment in target-branch ([481c84b](https://github.com/huynguyen-hl/project-identity-resolver/commit/481c84bb2796556e8f9af103a302fc3445893794))
+* Comment out target-branch ([f965e2c](https://github.com/huynguyen-hl/project-identity-resolver/commit/f965e2cbd34e45ec363c62abbc80e2a7c190f893))
+
 ## [1.0.2](https://github.com/huynguyen-hl/project-identity-resolver/compare/v1.0.1...v1.0.2) (2024-12-25)
 
 
