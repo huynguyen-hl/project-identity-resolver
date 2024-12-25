@@ -46,7 +46,7 @@ jobs:
         id: release
         uses: googleapis/release-please-action@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.RELEASE_PLEASE_TOKEN }}  
           target-branch: ${{ github.ref_name }}  # Use the current branch name
           config-file: .github/workflows/release-please-config.json
           # optional. customize path to .release-please-manifest.json
