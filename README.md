@@ -226,3 +226,4 @@ storage-service:latest
 
 feat: add real-time data synchronization
 fix: prevent memory leak in background tasks
+refactor: improve code organization in storage service
