@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.1.0](https://github.com/huynguyen-hl/project-identity-resolver/compare/v1.0.0...v1.1.0) (2024-12-25)
+
+
+### Features
+
+* Implement new feature ([cd94fbd](https://github.com/huynguyen-hl/project-identity-resolver/commit/cd94fbd0b0c95fee6e5cd7173d46510740c0916b))
+* New feature ([bab4abe](https://github.com/huynguyen-hl/project-identity-resolver/commit/bab4abe6e7797ad983e4f1ee0bbfe0a07dc22ba5))
+
+
+### Bug Fixes
+
+* Update readme ([ae5692d](https://github.com/huynguyen-hl/project-identity-resolver/commit/ae5692d4846dc94dd40e226dad3aa9489990677a))
+* Update readme ([635601c](https://github.com/huynguyen-hl/project-identity-resolver/commit/635601c03c1e697c3ce62776816d696dbb641b81))
+
 ## [1.0.0](https://github.com/huynguyen-hl/project-identity-resolver/compare/v1.0.0...v1.0.0) (2024-12-25)
 
 
