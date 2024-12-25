@@ -224,19 +224,4 @@ docker run -d --env-file .env -p 3333:3333 \
 storage-service:latest
 ```
 
-git commit -m "feat: add real-time data synchronization"
-git commit -m "fix: prevent memory leak in background tasks"
-git commit -m "refactor: improve code organization in storage service"
-git commit -m "test: add unit tests for storage service"
-git commit -m "changed: updated API response format"
-git commit -m "docs: update README with new features"
-git commit -m "chore: cleanup unused variables"
-git commit -m "feat!: change authentication method"
-
-test commit 1
-test commit 2
-test commit 3
-test commit 4
-test commit 5
-test commit 6
-test commit 7
+feat: add real-time data synchronization
