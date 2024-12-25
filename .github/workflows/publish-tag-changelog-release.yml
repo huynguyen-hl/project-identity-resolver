@@ -32,6 +32,11 @@ jobs:
           fi
           echo "new_version=$new_version" >> "$GITHUB_OUTPUT"
 
+      # Create version.txt file
+      - name: Create version.txt
+        run: |
+          echo "${{ steps.retrieve_version.outputs.new_version }}" > version.txt
+
       # Create a release in the repository by using the version from the output file
       - name: Create release
         id: release
