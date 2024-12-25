@@ -234,3 +234,4 @@ git commit -m "chore: cleanup unused variables"
 git commit -m "feat!: change authentication method"
 
 test commit 1
+test commit 2
