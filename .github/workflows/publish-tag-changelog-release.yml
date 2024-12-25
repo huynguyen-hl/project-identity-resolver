@@ -3,7 +3,7 @@ name: Publish Tag, Changelog, and Release
 on:
   push:
     branches:
-      - release
+      - release/*
   workflow_dispatch:
 
 

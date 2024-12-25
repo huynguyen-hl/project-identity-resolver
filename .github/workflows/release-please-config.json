@@ -4,7 +4,6 @@
   "prerelease": true,
   "skip-github-release": true,
   "always-update": true,
-  "release-as": "1.0.0",
 
   "include-component-in-tag": false,
   "packages": {
