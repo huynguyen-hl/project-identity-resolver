@@ -49,20 +49,13 @@ jobs:
           echo 'Release Output:'
           echo 'release_created: ${{ steps.release.outputs.release_created }}'
           echo 'releases_created: ${{ steps.release.outputs.releases_created }}'
-          echo 'upload_url: ${{ steps.release.outputs.upload_url }}'
-          echo 'html_url: ${{ steps.release.outputs.html_url }}'
           echo 'tag_name: ${{ steps.release.outputs.tag_name }}'
-          echo 'major: ${{ steps.release.outputs.major }}'
-          echo 'minor: ${{ steps.release.outputs.minor }}'
-          echo 'patch: ${{ steps.release.outputs.patch }}'
-          echo 'sha: ${{ steps.release.outputs.sha }}'
-          echo 'pr: ${{ steps.release.outputs.pr }}'
-          echo 'prs: ${{ steps.release.outputs.prs }}'
-          echo 'paths_released: ${{ steps.release.outputs.paths_released }}'
+          echo 'pr number: ${{ fromJson(steps.release.outputs.pr).number }}'
+          echo 'pr title: ${{ fromJson(steps.release.outputs.pr).title }}'
 
       # Create tag and release manually after changelog is generated
       - name: Create tag and release
-        if: steps.release.outputs.releases_created
+        if: ${{ steps.release.outputs.releases_created == 'true' && steps.release.outputs.tag_name != '' }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |          
