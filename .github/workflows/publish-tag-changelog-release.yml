@@ -45,29 +45,27 @@ jobs:
           manifest-file: .github/workflows/.release-please-manifest-rc.json
 
       - name: Output information
-        run: | 
+        run: |
           echo 'Release Output:'
           echo 'release_created: ${{ steps.release.outputs.release_created }}'
           echo 'releases_created: ${{ steps.release.outputs.releases_created }}'
           echo 'tag_name: ${{ steps.release.outputs.tag_name }}'
-          echo 'pr number: ${{ fromJson(steps.release.outputs.pr).number }}'
-          echo 'pr title: ${{ fromJson(steps.release.outputs.pr).title }}'
 
-      # Create tag and release manually after changelog is generated
-      - name: Create tag and release
-        if: ${{ steps.release.outputs.releases_created == 'true' && steps.release.outputs.tag_name != '' }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |          
-          # Create and push tag
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git config --global user.name "github-actions[bot]"
-          git tag -a "${{ steps.release.outputs.tag_name }}" -m "Release version ${{ steps.release.outputs.tag_name }}"
-          git push origin "${{ steps.release.outputs.tag_name }}"
+      # # Create tag and release manually after changelog is generated
+      # - name: Create tag and release
+      #   if: ${{ steps.release.outputs.releases_created == 'true' && steps.release.outputs.tag_name != '' }}
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #   run: |
+      #     # Create and push tag
+      #     git config --global user.email "github-actions[bot]@users.noreply.github.com"
+      #     git config --global user.name "github-actions[bot]"
+      #     git tag -a "${{ steps.release.outputs.tag_name }}" -m "Release version ${{ steps.release.outputs.tag_name }}"
+      #     git push origin "${{ steps.release.outputs.tag_name }}"
           
-          # Create GitHub release
-          gh release create "${{ steps.release.outputs.tag_name }}" \
-            --title "Release ${{ steps.release.outputs.tag_name }}" \
-            --notes-file CHANGELOG.md \
-            --prerelease=${{ steps.release.outputs.prerelease }} \
-            --target ${{ github.ref_name }}
+      #     # Create GitHub release
+      #     gh release create "${{ steps.release.outputs.tag_name }}" \
+      #       --title "Release ${{ steps.release.outputs.tag_name }}" \
+      #       --notes-file CHANGELOG.md \
+      #       --prerelease=${{ steps.release.outputs.prerelease }} \
+      #       --target ${{ github.ref_name }}
