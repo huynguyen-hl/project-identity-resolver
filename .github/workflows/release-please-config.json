@@ -2,7 +2,6 @@
   "bootstrap-sha": "6fc119838885b0cb831e78ddd23ac01cb819e585",
   "plugins": ["node-workspace", "sentence-case"],
   "prerelease": true,
-  "skip-github-release": true,
   "always-update": true,
 
   "include-component-in-tag": false,
