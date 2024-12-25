@@ -1,51 +1,14 @@
 {
+  "bootstrap-sha": "6fc119838885b0cb831e78ddd23ac01cb819e585",
+  "plugins": ["node-workspace", "sentence-case"],
+  "prerelease": true,
+  "skip-github-release": true,
+  "always-update": true,
+
+  "include-component-in-tag": false,
   "packages": {
     ".": {
-      "release-type": "simple",
-      "changelog-sections": [
-        {
-          "type": "feat",
-          "section": "Features",
-          "hidden": false,
-          "type-plural": "Features"
-        },
-        {
-          "type": "fix",
-          "section": "Bug Fixes",
-          "hidden": false,
-          "type-plural": "Bug Fixes"
-        },
-        {
-          "type": "refactor",
-          "section": "Code Refactoring",
-          "hidden": false,
-          "type-plural": "Code Refactoring"
-        },
-        {
-          "type": "test",
-          "section": "Tests",
-          "hidden": false,
-          "type-plural": "Tests"
-        },
-        {
-          "type": "changed",
-          "section": "Changed",
-          "hidden": false,
-          "type-plural": "Changes"
-        },
-        {
-          "type": "docs",
-          "section": "Documentation",
-          "hidden": false,
-          "type-plural": "Documentation"
-        },
-        {
-          "type": "chore",
-          "section": "Miscellaneous",
-          "hidden": false,
-          "type-plural": "Chores"
-        }
-      ]
+      "release-type": "simple"
     }
   }
 }

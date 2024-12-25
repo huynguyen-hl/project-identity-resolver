@@ -3,7 +3,7 @@ name: Publish Tag
 on:
   push:
     branches:
-      - main
+      - release
   workflow_dispatch:
 
 
@@ -33,45 +33,14 @@ jobs:
           echo "new_version=$new_version" >> "$GITHUB_OUTPUT"
 
       # Create and push tag to the repository by using the version from the output file
-      # - name: Create and push tag
-      #   id: publish-tag
-      #   run: |
-      #     new_version=${{ steps.retrieve_version.outputs.new_version }}
+      - name: Create and push tag
+        id: publish-tag
+        run: |
+          new_version=${{ steps.retrieve_version.outputs.new_version }}
 
-      #     git config --global user.email "github-actions[bot]@users.noreply.github.com"
-      #     git config --global user.name "github-actions[bot]"
-      #     git tag -a "$new_version" -m "Release version $new_version"
-      #     git push origin "$new_version"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+          git tag -a "$new_version" -m "Release version $new_version"
+          git push origin "$new_version"
 
-      #     echo "new_tag=$new_version" >> "$GITHUB_OUTPUT"
-
-      # Create a release in the repository by using the version from the output file
-      - name: Create release
-        id: release
-        uses: googleapis/release-please-action@v4
-        with:
-          release-type: simple
-          # prerelease: true
-          # label: release
-          # release-as: ${{ steps.retrieve_version.outputs.new_version }}
-
-          # config-file: .github/workflows/release-please-config.json
-
-      # Create tag and release manually after changelog is generated
-      # - name: Create tag and release
-      #   if: steps.release.outputs.releases_created
-      #   run: |
-      #     version=${{ steps.retrieve_version.outputs.new_version }}
-          
-          # Create and push tag
-          # git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          # git config --global user.name "github-actions[bot]"
-          # git tag -a "$version" -m "Release version $version"
-          # git push origin "$version"
-          
-          # # Create GitHub release using gh cli
-          # gh release create "$version" \
-          #   --title "Release $version" \
-          #   --notes-file CHANGELOG.md
-        # env:
-        #   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          echo "new_tag=$new_version" >> "$GITHUB_OUTPUT"
