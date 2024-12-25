@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/huynguyen-hl/project-identity-resolver/compare/v1.0.1...v1.0.2) (2024-12-25)
+
+
+### Changed
+
+* Update publish-tag-changelog-release workflow ([2ee2493](https://github.com/huynguyen-hl/project-identity-resolver/commit/2ee24935f0730e684ec39849a7c43fb14a04a291))
+
 ## [1.0.1](https://github.com/huynguyen-hl/project-identity-resolver/compare/v1.0.0...v1.0.1) (2024-12-25)
 
 
