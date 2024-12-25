@@ -1,4 +1,4 @@
-name: Publish Tag
+name: Publish Tag, Changelog, and Release
 
 on:
   push:
@@ -12,7 +12,7 @@ on:
 #   pull-requests: write
 
 jobs:
-  publish-tag:
+  publish-tag-changelog-release:
     runs-on: ubuntu-latest
     outputs:
       new_version: ${{ steps.retrieve_version.outputs.new_version }}
