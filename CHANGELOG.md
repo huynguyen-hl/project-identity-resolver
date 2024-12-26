@@ -1,5 +1,23 @@
 # Changelog
 
+## [1.0.4](https://github.com/huynguyen-hl/project-identity-resolver/compare/v1.0.3...v1.0.4) (2024-12-26)
+
+
+### Code Refactoring
+
+* Rename publish-tag-changelog-release to publish-changelog ([4adc571](https://github.com/huynguyen-hl/project-identity-resolver/commit/4adc571e63a8be0c60057f7593cb192ea500e0e5))
+
+
+### Changed
+
+* Update release-please-config.json config ([0593826](https://github.com/huynguyen-hl/project-identity-resolver/commit/0593826e922b753e4817aaeb8adb10283585e850))
+* Updated API response format ([d7cb2eb](https://github.com/huynguyen-hl/project-identity-resolver/commit/d7cb2ebea23ec1479548b9fac1005aca008c3312))
+
+
+### Miscellaneous
+
+* Update release-please-config.json ([33993c0](https://github.com/huynguyen-hl/project-identity-resolver/commit/33993c0b7962f6e540b8b034e544ec8667dd9cea))
+
 ## [1.0.3](https://github.com/huynguyen-hl/project-identity-resolver/compare/v1.0.2...v1.0.3) (2024-12-25)
 
 
