@@ -1,4 +1,4 @@
-name: Publish Tag Release
+name: Release
 
 on:
   push:
@@ -10,7 +10,7 @@ permissions:
   contents: write
 
 jobs:
-  publish-tag-release:
+  release:
     runs-on: ubuntu-latest
     outputs:
       new_version: ${{ steps.retrieve_version.outputs.new_version }}
@@ -30,9 +30,9 @@ jobs:
           fi
           echo "new_version=$new_version" >> "$GITHUB_OUTPUT"
 
-      # Create and push tag to the repository by using the version from the output file
-      - name: Create and push tag
-        id: publish-tag
+      # Create tag to the repository by using the version from the output file
+      - name: Create tag
+        id: create-tag
         run: |
           new_version=${{ steps.retrieve_version.outputs.new_version }}
 
@@ -49,7 +49,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           new_version=${{ steps.retrieve_version.outputs.new_version }}
-          new_tag=${{ steps.publish-tag.outputs.new_tag }}          
+          new_tag=${{ steps.create-tag.outputs.new_tag }}          
 
           sed -n "/## \[$new_version\]/,/## \[/p" CHANGELOG.md | sed '$d' > release_notes.md
 

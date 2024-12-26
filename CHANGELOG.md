@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.0.8](https://github.com/huynguyen-hl/project-identity-resolver/compare/1.0.7...v1.0.8) (2024-12-26)
+
+
+### Code Refactoring
+
+* Rename the release workflow from publish-tag-release to release ([ca98166](https://github.com/huynguyen-hl/project-identity-resolver/commit/ca9816682ad94b16ad6cc11550c7e0112a32ff06))
+
+
+### Miscellaneous
+
+* Increase version 1.0.8 ([f8ea04d](https://github.com/huynguyen-hl/project-identity-resolver/commit/f8ea04dc2df0c90827803fb97c1ddc1e79b2c52a))
+* Release 1.0.8 ([99035c8](https://github.com/huynguyen-hl/project-identity-resolver/commit/99035c80e98c2cb5be177ab057ef467614f4e100))
+
 ## [1.0.7](https://github.com/huynguyen-hl/project-identity-resolver/compare/1.0.6...v1.0.7) (2024-12-26)
 
 
