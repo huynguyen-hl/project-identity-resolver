@@ -1,13 +1,15 @@
 {
   "bootstrap-sha": "e19c2b246e30d542c8751773ce27bc3d4aacf565",
   "plugins": ["node-workspace", "sentence-case"],
-  "prerelease": true,
   "always-update": true,
-
+  "skip-github-release": true,
+  "skip-github-pull-request": false,
   "include-component-in-tag": false,
+  "labels": ["auto-merge"],
   "packages": {
     ".": {
       "release-type": "simple",
+      "skip-github-release": true,
       "changelog-sections": [
         {
           "type": "feat",
