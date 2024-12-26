@@ -1,7 +1,11 @@
-# Storage Service
+# project-identity-resolver
+Reference implementation of UNTP link resolver and credential store
 
-The storage service directory contains an Express REST API
-that provides endpoints to encrypt and store Verifiable Credentials and documents.
+* Will implement [ISO-18975](https://www.iso.org/standard/85540.html)
+* Will support any identifier type
+* Will add credential store capabilites to host DPPs etc.
+
+Development work is expected to start in July 2024.
 
 ## Overview
 
@@ -223,3 +227,8 @@ docker run -d --env-file .env -p 3333:3333 \
 -e AWS_SECRET_ACCESS_KEY=YOUR_AWS_SECRET \
 storage-service:latest
 ```
+
+feat: add real-time data synchronization
+fix: prevent memory leak in background tasks
+refactor: improve code organization in storage service
+test: add unit tests for storage service
