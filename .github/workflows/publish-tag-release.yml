@@ -49,14 +49,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           new_version=${{ steps.retrieve_version.outputs.new_version }}
-          new_tag=${{ steps.publish-tag.outputs.new_tag }}
-          
-          # Extract the specific version section from CHANGELOG.md
-          VERSION_NO_V="${VERSION#v}"  # Remove 'v' prefix for searching
-          # Create a temporary file for the extracted section
-          echo "Extracting changelog for version $new_version"
-          
-          # Extract section between current version header and the next version header
+          new_tag=${{ steps.publish-tag.outputs.new_tag }}          
+
           sed -n "/## \[$new_version\]/,/## \[/p" CHANGELOG.md | sed '$d' > release_notes.md
 
           gh release create "$new_tag" \
