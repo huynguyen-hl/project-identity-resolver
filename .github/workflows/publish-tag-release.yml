@@ -50,7 +50,7 @@ jobs:
         run: |
           new_tag=${{ steps.publish-tag.outputs.new_tag }}
 
-          gh release create "$new_tag" \
+          gh release create "v$new_tag" \
             --title "Release ${{ steps.retrieve_version.outputs.new_version }}" \
             --notes-file CHANGELOG.md \
             --target ${{ github.ref_name }}
