@@ -1,0 +1,39 @@
+name: Test and Build
+
+on:
+    pull_request:
+        branches:
+            - next
+
+jobs:
+    test-and-build:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+
+            - name: Install Node.js
+              uses: actions/setup-node@v3
+              with:
+                  node-version: '18'
+                  cache: 'yarn'
+
+            - name: Install dependencies
+              run: yarn install
+
+            - name: Check linting
+              run: yarn lint
+
+            - name: Run tests
+              run: yarn test:ci
+      
+            - name: Coverage
+              uses: artiomtr/jest-coverage-report-action@v2
+              with:
+                test-script: yarn jest
+                github-token: ${{ secrets.GITHUB_TOKEN }}
+                coverage-file: report.json
+                base-coverage-file: report.json
+                threshold: 80
+
+            - name: Build
+              run: yarn build
