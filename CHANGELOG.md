@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.0.3](https://github.com/huynguyen-hl/project-identity-resolver/compare/v1.0.2...v1.0.3) (2024-12-26)
+
+
+### Miscellaneous
+
+* Increase version 1.0.3 ([c0d4d78](https://github.com/huynguyen-hl/project-identity-resolver/commit/c0d4d78a5ba209fc6cd832156352600282a4b114))
+* Release 1.0.2 ([5f627bf](https://github.com/huynguyen-hl/project-identity-resolver/commit/5f627bf22064fb4467471a4d5720a6dd1d303820))
+* Release 1.0.3 ([193a9d0](https://github.com/huynguyen-hl/project-identity-resolver/commit/193a9d023e82107dd1730bc533e310df7bcd252f))
+
 ## [1.0.2](https://github.com/huynguyen-hl/project-identity-resolver/compare/v1.0.0...v1.0.2) (2024-12-26)
 
 
