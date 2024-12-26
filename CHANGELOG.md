@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.0.7](https://github.com/huynguyen-hl/project-identity-resolver/compare/1.0.6...v1.0.7) (2024-12-26)
+
+
+### Features
+
+* Update publish-tag-release workflow ([f91109e](https://github.com/huynguyen-hl/project-identity-resolver/commit/f91109e702104fc3f026cfdc56dcb307ec5e851d))
+
+
+### Miscellaneous
+
+* Increase version 1.0.7 ([23c685c](https://github.com/huynguyen-hl/project-identity-resolver/commit/23c685c71f13704fb8d32c768e8e0112b173306f))
+* Release 1.0.7 ([14ac410](https://github.com/huynguyen-hl/project-identity-resolver/commit/14ac410bff67f8eecc569dee111d096f8d52d0ee))
+
 ## [1.0.6](https://github.com/huynguyen-hl/project-identity-resolver/compare/1.0.5...v1.0.6) (2024-12-26)
 
 
