@@ -1,4 +1,4 @@
-name: Publish Tag
+name: Publish Tag Release
 
 on:
   push:
@@ -11,7 +11,7 @@ permissions:
   pull-requests: write
 
 jobs:
-  publish-tag:
+  publish-tag-release:
     runs-on: ubuntu-latest
     outputs:
       new_version: ${{ steps.retrieve_version.outputs.new_version }}
@@ -43,3 +43,11 @@ jobs:
           git push origin "$new_version"
 
           echo "new_tag=$new_version" >> "$GITHUB_OUTPUT"
+
+      # Create GitHub release
+      - name: Create GitHub Release
+        run: |
+          gh release create "${{ steps.retrieve_version.outputs.new_version }}" \
+            --title "Release ${{ steps.retrieve_version.outputs.new_version }}" \
+            --notes-file CHANGELOG.md \
+            --target ${{ github.ref_name }}
