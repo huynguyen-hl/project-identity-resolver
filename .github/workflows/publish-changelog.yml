@@ -1,4 +1,4 @@
-name: Publish Tag, Changelog, and Release
+name: Publish Changelog
 
 on:
   push:
@@ -12,7 +12,7 @@ permissions:
   id-token: write
 
 jobs:
-  publish-tag-changelog-release:
+  publish-changelog:
     runs-on: ubuntu-latest
     # outputs:
     #   new_version: ${{ steps.retrieve_version.outputs.new_version }}
@@ -46,7 +46,6 @@ jobs:
 
       - name: Output information
         run: |
-          echo 'Release Output:'
           echo 'release_created: ${{ steps.release.outputs.release_created }}'
           echo 'releases_created: ${{ steps.release.outputs.releases_created }}'
           echo 'tag_name: ${{ steps.release.outputs.tag_name }}'
