@@ -38,8 +38,8 @@ jobs:
 
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
-          git tag -a "v$new_version" -m "Release version v$new_version"
-          git push origin "v$new_version"
+          git tag -a "$new_version" -m "Release version $new_version"
+          git push origin "$new_version"
 
           echo "new_tag=$new_version" >> "$GITHUB_OUTPUT"
 
@@ -57,13 +57,9 @@ jobs:
           echo "Extracting changelog for version $new_version"
           
           # Extract section between current version header and the next version header
-          awk -v ver="## [$new_version]" '
-            $0 ~ ver {p=1; print; next}
-            /^## \[/ {p=0}
-            p {print}
-          ' CHANGELOG.md > release_notes.md
+          sed -n "/## \[$new_version\]/,/## \[/p" CHANGELOG.md | sed '$d' > release_notes.md
 
-          gh release create "v$new_tag" \
+          gh release create "$new_tag" \
             --title "Release ${{ steps.retrieve_version.outputs.new_version }}" \
             --notes-file release_notes.md \
             --target ${{ github.ref_name }}
