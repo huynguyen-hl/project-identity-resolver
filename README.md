@@ -229,3 +229,4 @@ fix: prevent memory leak in background tasks
 refactor: improve code organization in storage service
 test: add unit tests for storage service
 changed: updated API response format
+docs: update README with new features
