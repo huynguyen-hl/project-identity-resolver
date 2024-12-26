@@ -1,5 +1,27 @@
 # Changelog
 
+## [1.0.5](https://github.com/huynguyen-hl/project-identity-resolver/compare/v1.0.4...v1.0.5) (2024-12-26)
+
+
+### Code Refactoring
+
+* Rename publish-tag to publish-tag-release ([c78766e](https://github.com/huynguyen-hl/project-identity-resolver/commit/c78766e44da0ad367c1a83ee7e0f088430e33c16))
+
+
+### Miscellaneous
+
+* Increase version 1.0.4 ([1e22abf](https://github.com/huynguyen-hl/project-identity-resolver/commit/1e22abf13940e1e4176632dac0e7b9d1b1efe0c6))
+* Increase version 1.0.5 ([6d75b67](https://github.com/huynguyen-hl/project-identity-resolver/commit/6d75b6783f1e72983c0e38fbfcceceb27544644d))
+* Release 1.0.0 ([88c1935](https://github.com/huynguyen-hl/project-identity-resolver/commit/88c1935cb038e7f387e149569ff6b9bea1f3ab5f))
+* Release 1.0.0 ([9e6b6e4](https://github.com/huynguyen-hl/project-identity-resolver/commit/9e6b6e49e0d9974e2966d3ee16a48228a8db99c6))
+* Release 1.0.0 ([3222fba](https://github.com/huynguyen-hl/project-identity-resolver/commit/3222fbac220812d0cc493ea3a238b92eb067a0cd))
+* Release 1.0.4 ([fcc491c](https://github.com/huynguyen-hl/project-identity-resolver/commit/fcc491c0336e597c376ce847cfad91a29077d178))
+* Release 1.0.4 ([6567cfc](https://github.com/huynguyen-hl/project-identity-resolver/commit/6567cfcb6fc291999afd675485467ab4b03518e1))
+* Release 1.0.5 ([5b1980c](https://github.com/huynguyen-hl/project-identity-resolver/commit/5b1980c38e7bdf0f3d1337fa94a5cf0ef14365ad))
+* **release/v1.0.4:** Release 1.0.4 ([77ef31b](https://github.com/huynguyen-hl/project-identity-resolver/commit/77ef31b390d8f8225d671f01b89e7863a659df2a))
+* Update config ([7251b04](https://github.com/huynguyen-hl/project-identity-resolver/commit/7251b0470860967e8c56f245e7c26dac18ebb9d1))
+* Update release-please-config.json ([bead731](https://github.com/huynguyen-hl/project-identity-resolver/commit/bead7319a5b112d622946cec59af8aff86f1a7ba))
+
 ## [1.0.4](https://github.com/huynguyen-hl/project-identity-resolver/compare/v1.0.3...v1.0.4) (2024-12-26)
 
 
