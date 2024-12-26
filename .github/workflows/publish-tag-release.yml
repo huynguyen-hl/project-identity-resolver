@@ -48,9 +48,22 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          new_version=${{ steps.retrieve_version.outputs.new_version }}
           new_tag=${{ steps.publish-tag.outputs.new_tag }}
+          
+          # Extract the specific version section from CHANGELOG.md
+          VERSION_NO_V="${VERSION#v}"  # Remove 'v' prefix for searching
+          # Create a temporary file for the extracted section
+          echo "Extracting changelog for version $new_version"
+          
+          # Extract section between current version header and the next version header
+          awk -v ver="## [$new_version]" '
+            $0 ~ ver {p=1; print; next}
+            /^## \[/ {p=0}
+            p {print}
+          ' CHANGELOG.md > release_notes.md
 
           gh release create "v$new_tag" \
             --title "Release ${{ steps.retrieve_version.outputs.new_version }}" \
-            --notes-file CHANGELOG.md \
+            --notes-file release_notes.md \
             --target ${{ github.ref_name }}
