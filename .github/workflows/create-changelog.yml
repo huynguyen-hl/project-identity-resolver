@@ -12,8 +12,26 @@ permissions:
   id-token: write
 
 jobs:
+  check-skip:
+    runs-on: ubuntu-latest
+    outputs:
+      should_skip: ${{ steps.check.outputs.should_skip }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - id: check
+        run: |
+          COMMIT_MSG=$(git log -1 --pretty=%B)
+          if [[ $COMMIT_MSG == *"Merge pull request"* && $COMMIT_MSG == *"release-please--branches"* ]]; then
+            echo "should_skip=true" >> "$GITHUB_OUTPUT"
+          fi
+
   create-changelog:
     runs-on: ubuntu-latest
+    needs: check-skip
+    if: needs.check-skip.outputs.should_skip != 'true'
     # outputs:
     #   new_version: ${{ steps.retrieve_version.outputs.new_version }}
 
