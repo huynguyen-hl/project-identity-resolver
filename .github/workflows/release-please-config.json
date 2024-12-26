@@ -7,12 +7,12 @@
   "include-component-in-tag": false,
   "labels": ["auto-merge"],
   "release-labels": ["auto-merge"],
-  "pull-request-header": "",
-  "pull-request-footer": "",
   "packages": {
     ".": {
       "release-type": "simple",
       "skip-github-release": true,
+      "pull-request-header": "",
+      "pull-request-footer": "",
       "changelog-sections": [
         {
           "type": "feat",
