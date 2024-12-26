@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.0.5](https://github.com/huynguyen-hl/project-identity-resolver/compare/1.0.4...v1.0.5) (2024-12-26)
+
+
+### Changed
+
+* Add publish-tag-release ([3992492](https://github.com/huynguyen-hl/project-identity-resolver/commit/3992492cc75229355b51c879e969fbd1873f96cc))
+
+
+### Miscellaneous
+
+* Increase version 1.0.5 ([9f6b90e](https://github.com/huynguyen-hl/project-identity-resolver/commit/9f6b90e30eb6b0f47286f734b1beccb049ec1fdb))
+* Release 1.0.5 ([6a98475](https://github.com/huynguyen-hl/project-identity-resolver/commit/6a984753b430aeed760eb1f1865d9af6a4f41a1f))
+
 ## [1.0.4](https://github.com/huynguyen-hl/project-identity-resolver/compare/v1.0.3...v1.0.4) (2024-12-26)
 
 
