@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.0.4](https://github.com/huynguyen-hl/project-identity-resolver/compare/v1.0.3...v1.0.4) (2024-12-26)
+
+
+### Miscellaneous
+
+* Increase version 1.0.4 ([1e22abf](https://github.com/huynguyen-hl/project-identity-resolver/commit/1e22abf13940e1e4176632dac0e7b9d1b1efe0c6))
+* Release 1.0.0 ([88c1935](https://github.com/huynguyen-hl/project-identity-resolver/commit/88c1935cb038e7f387e149569ff6b9bea1f3ab5f))
+* Release 1.0.0 ([9e6b6e4](https://github.com/huynguyen-hl/project-identity-resolver/commit/9e6b6e49e0d9974e2966d3ee16a48228a8db99c6))
+* Release 1.0.0 ([3222fba](https://github.com/huynguyen-hl/project-identity-resolver/commit/3222fbac220812d0cc493ea3a238b92eb067a0cd))
+* Release 1.0.4 ([fcc491c](https://github.com/huynguyen-hl/project-identity-resolver/commit/fcc491c0336e597c376ce847cfad91a29077d178))
+* Release 1.0.4 ([6567cfc](https://github.com/huynguyen-hl/project-identity-resolver/commit/6567cfcb6fc291999afd675485467ab4b03518e1))
+* Update config ([7251b04](https://github.com/huynguyen-hl/project-identity-resolver/commit/7251b0470860967e8c56f245e7c26dac18ebb9d1))
+* Update release-please-config.json ([bead731](https://github.com/huynguyen-hl/project-identity-resolver/commit/bead7319a5b112d622946cec59af8aff86f1a7ba))
+
 ## [1.0.3](https://github.com/huynguyen-hl/project-identity-resolver/compare/v1.0.2...v1.0.3) (2024-12-26)
 
 
