@@ -45,6 +45,8 @@ jobs:
 
       # Create GitHub release
       - name: Create GitHub Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           new_tag=${{ steps.publish-tag.outputs.new_tag }}
 
