@@ -39,7 +39,7 @@ jobs:
         run: |
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
-          git commit --allow-empty -m "release ${{ steps.retrieve_version.outputs.new_version }}" -m "Release-As: ${{ steps.retrieve_version.outputs.new_version }}"
+          git commit --allow-empty -m "chore: release ${{ steps.retrieve_version.outputs.new_version }}" -m "Release-As: ${{ steps.retrieve_version.outputs.new_version }}"
           git push
 
       # Create a release in the repository by using the version from the output file
